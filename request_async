@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for i in $(seq 1 $1); do
+  curl -s -o /dev/null -w "Request $i: %{http_code}\n" http://localhost:8080/api/users &
+done
+
+wait
