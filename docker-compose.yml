@@ -6,6 +6,8 @@ services:
       - "8080:80"
     volumes:
       - ".:/app"
+      #- "./docker/application.conf:/opt/docker/etc/php/fpm/pool.d/application.conf"
+      #- "./docker/nginx.conf:/opt/docker/etc/nginx/nginx.conf"
     environment:
       PHP_DISPLAY_ERRORS: 1
       WEB_DOCUMENT_ROOT: /app/public
